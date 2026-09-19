@@ -2,7 +2,7 @@
 
 resource "aws_instance" "nexus-server" {
   ami           = data.aws_ami.latest.id
-  instance_type = "t3.medium"
+  instance_type = "c7i-flex.large"
   subnet_id     = aws_subnet.mypublicsubnet.id
   user_data     = file("./nexus-server.sh")
   key_name      = "jenkins-bhai-chal"
