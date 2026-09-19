@@ -3,7 +3,7 @@
 
 resource "aws_instance" "sonar-server" {
   ami           = data.aws_ami.latest.id
-  instance_type = "t3.medium"
+  instance_type = "c7i-flex.large"
 
   subnet_id = aws_subnet.mypublicsubnet.id
 
